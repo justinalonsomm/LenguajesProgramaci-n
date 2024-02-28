@@ -1,0 +1,8 @@
+;Ejercicio#1/JustinMartínez/2019027054
+(define (calcular-monto Cap I N); se define una función llamada "calcular_monto" la cual tiene tres parámetros, "cap" que es capital inicial, "I" interés, "N" número de años.
+  (if (= N 0); sin "N" es igual a cero se devuleve el capital inicial ya que no hay interés.
+      Cap
+      (calcular-monto (+ Cap (* Cap I)) I (- N 1))))
+; se llama recursiva a la funcion si el "N" no es igual a cero y se calcula para el siguiente año
+;también se representa la formula del interés de "capital" + (capital * tasa de interés)"
+;(- N 1) reducen los años.

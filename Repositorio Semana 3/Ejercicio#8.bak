@@ -1,0 +1,7 @@
+;Ejercicio#8/JustinMartínez/2019027054
+
+;Construya una función que se llame sub-conjunto? Esta función recibe dos argumentos y debe producir un valor #t cuando el primer argumento es subconjunto del segundo
+;y #f en caso contrario. 
+
+;***************************EVALUADO*********************************
+
