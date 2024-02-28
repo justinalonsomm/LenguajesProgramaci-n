@@ -1,5 +1,0 @@
-;Ejercicio#2/JustinMartínez/2019027054
-(define (sumd N)
-  (if (= N 0) 0 (+ (remainder N 10) (sumd (quotient N 10)))))
-(sumd 124)
-(sumd 12480)
