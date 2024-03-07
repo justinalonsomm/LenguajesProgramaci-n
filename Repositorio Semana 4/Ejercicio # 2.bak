@@ -1,0 +1,13 @@
+;;Ejercicio 2: Filtrar Subcadenas
+
+
+#lang racket
+
+;; Función para filtrar subcadenas en una lista de cadenas
+(define (filtrar-subcadenas subcadena lista-de-cadenas)
+  (filter (lambda (cadena) (string-contains? cadena subcadena)) lista-de-cadenas))
+
+;; Caso de prueba
+(displayln "Caso de prueba:")
+(displayln (filtrar-subcadenas "la" '("la casa" "el perro" "pintando la cerca")))
+;; Debería imprimir '("la casa" "pintando la cerca")'

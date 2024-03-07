@@ -1,0 +1,30 @@
+#lang racket
+
+;; Definición de una factura como una lista de productos con su precio
+(define factura1 '((producto1 20) (producto2 30) (producto3 15)))
+;; Ejercicio 1: Facturas y Cálculos
+
+(define factura2 '((producto4 25) (producto5 40) (producto6 10)))
+
+;; Función para calcular el impuesto total de una factura
+(define (calcular-impuesto factura umbral)
+  ;; Filtrar productos que superan el umbral
+  (define productos-a-tasar (filter (lambda (prod) (> (cdr prod) umbral)) factura))
+  
+  ;; Calcular el impuesto total (13% sobre el monto de cada producto)
+  (define impuesto-total (* 0.13 (apply + (map cdr productos-a-tasar))))
+  
+  impuesto-total)
+
+;; Función para calcular el monto total de una factura sin impuesto
+(define (calcular-monto-total factura)
+  (apply + (map cdr factura)))
+
+;; Casos de prueba
+(displayln "Caso de prueba 1:")
+(displayln (calcular-impuesto factura1 25)) ;; Debería imprimir 8.45
+(displayln (calcular-monto-total factura1))  ;; Debería imprimir 65
+
+(displayln "\nCaso de prueba 2:")
+(displayln (calcular-impuesto factura2 30)) ;; Debería imprimir 4.5
+(displayln (calcular-monto-total factura2))  ;; Debería imprimir 75
