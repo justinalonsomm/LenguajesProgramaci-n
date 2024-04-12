@@ -1,0 +1,23 @@
+Ejercicio 1:
+
+?- sub_conjunto([], [1,2,3,4,5]).
+?- sub_conjunto([1,2,3], [1,2,3,4,5]).
+?- sub_conjunto([1,2,6], [1,2,3,4,5]).
+
+Ejercicio 2:
+
+?- aplanar([1,2,[3,[4,5],[6,7]]],X).
+
+Ejercicio 3:
+
+?- distanciaH("romano","comino",X).
+?- distanciaH("romano","camino",X).
+?- distanciaH("roma","comino",X).
+?- distanciaH("romano","ron",X).
+?- distanciaH("romano","cama",X).
+
+Ejercicio 4:
+
+?- total_calorias(guacamole, filete_de_cerdo, flan, Total).
+?- total_calorias(consome, salmon, naranja_confitada, Total).
+?- total_calorias(ensalada, pollo_al_horno, flan_de_coco, Total).
